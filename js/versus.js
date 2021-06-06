@@ -77,13 +77,8 @@ function createChart(stats1, stats2) {
     })
 }
 
-//find the names and create cards
+//check if the superhero names exist in the API
 function findHeroByName(data) {
-    //get html elements by ID
-    const heroOneInfo = document.getElementById('heroOneInfo');
-    const heroTwoInfo = document.getElementById('heroTwoInfo');
-
-    //this section is making sure that the user input exists or not
     let found1 = false;
     let found2 = false;
 
@@ -98,10 +93,22 @@ function findHeroByName(data) {
         }
     })
 
-    //if both hero names exist
+    //if both inputs exist, call function to display in DOM
     if(found1 === true &&  found2 === true) {
-        let stats1, stats2;
+        addToDOM(data);
+    } else {
+        //if one of the inputs don't exist, display error message
+        let error = document.createElement('p');
+        error.setAttribute('color', 'red');
+        heroOneInfo.appendChild(error);
+        error.innerText = 'First input is not found. Please, try again.';
+    }
+}
 
+//find the names and create cards
+function addToDOM(data) {
+    let stats1, stats2;
+    
         //iterate through the array and find matching name again and then change DOM
         //first input/superhero #1
         data.forEach(element => {
@@ -179,32 +186,6 @@ function findHeroByName(data) {
 
         //pass the two objects with powerstats to a funtion for creating charts
         createChart(stats1, stats2);
-    }
-
-    //if one input exists, but the other one doesn't, show error message
-    if(found1 === true &&  found2 === false) {
-        let error = document.createElement('p');
-        error.setAttribute('color', 'red');
-        heroOneInfo.appendChild(error);
-        error.innerText = 'Second input is not found. Please, try again.';
-    }
-
-    //if one input exists, but the other one doesn't, show error message
-    if(found1 === false && found2 === true) {
-        let error = document.createElement('p');
-        error.setAttribute('color', 'red');
-        heroOneInfo.appendChild(error);
-        error.innerText = 'First input is not found. Please, try again.';
-    }
-
-    //if both inputs don't exist, show error message
-    if(found1 === false && found2 === false) {
-        let error = document.createElement('p');
-        error.setAttribute('color', 'red');
-        heroOneInfo.appendChild(error);
-        error.innerText = 'Names not found. Please, try again.';
-    }
-
 }
 
 //function to make calls to the API
