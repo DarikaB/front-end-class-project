@@ -90,18 +90,7 @@ h1 {
     text-align: center;
 }
 
-/* #content {
-    margin-top: 3.0rem;
-} */
-
 .cool-line {
-    /* padding: 0;
-    border: none;
-    background-image: -webkit-linear-gradient(left, rgba(255, 119, 237, 0.877), rgba(66, 53, 240, 0.979), rgba(77, 240, 252, 0.925));
-    background-image: -moz-linear-gradient(left, rgba(255, 119, 237, 0.877), rgba(66, 53, 240, 0.979), rgba(77, 240, 252, 0.925));
-    background-image: -ms-linear-gradient(left, rgba(255, 119, 237, 0.877), rgba(66, 53, 240, 0.979), rgba(77, 240, 252, 0.925));
-    background-image: -o-linear-gradient(left, rgba(255, 119, 237, 0.877), rgba(66, 53, 240, 0.979), rgba(77, 240, 252, 0.925)); */
-
     border: 5px dotted #444;
     border-style: none none dotted; 
     color: #fff; 
@@ -111,7 +100,6 @@ h1 {
 main {
     padding: 0 8%;
     padding-bottom: 20px;
-
 }
 
 .vs-page,
@@ -165,7 +153,6 @@ main {
     padding: 10px 0;
     color: #91eee1;
     width: 160px;
-    /* height: 380px; */
 }
 
 #cards p {
@@ -204,8 +191,6 @@ main {
                 0 0 25px #b8b5ff,
                 0 0 50px #b8b5ff,
                 0 0 500px #b8b5ff;
-    /* border: 1px solid #a6a3fd; */
-
 }
 
 .vs-body #heroOneName {
@@ -218,7 +203,6 @@ main {
 
 #images {
     text-align: center;
-    /* display: inline; */
 }
 
 .card-div {
@@ -234,10 +218,6 @@ main {
 .vs-body .container p {
     margin: 0;
     padding: 3px;
-}
-
-.vs-body .container img {
-    /* padding: 10px; */
 }
 
 #myChart1,

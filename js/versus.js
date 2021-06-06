@@ -99,9 +99,6 @@ function findNames(data) {
         }
     })
 
-    // let found = findIfExists(data);
-    // console.log(found);
-
     //if both hero names exist
     if(found1 === true &&  found2 === true) {
         let stats1, stats2;
