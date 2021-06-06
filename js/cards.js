@@ -27,9 +27,6 @@ function displayCards(data) {
         } else {
             realName.innerText = element.biography.fullName;
         }
-        
-        // console.log(element.biography.fullName);
-        // console.log(typeof(element.biography.fullName));
     })
 }
 
