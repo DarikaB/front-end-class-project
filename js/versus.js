@@ -115,17 +115,21 @@ function addToDOM(data) {
             if(heroOneName.value === element.name) {
                 //create name in h5 tag
                 let name = document.createElement('h5');
-                //append it as a child to an existing tag reserved for content
-                heroOneInfo.appendChild(name);
-                name.innerText = element.name;
                 //create img tag in DOM
                 let img = document.createElement('img');
+                //add p tag for the real name of the superhero
                 img.src = element.images.sm;
                 //using the name of the hero as alternate text for accesibility
                 img.alt = element.name;
-                heroOneInfo.appendChild(img);
-                //add p tag for the real name of the superhero
                 let realName = document.createElement('p');
+                //create p tag for the publisher of the superhero such as DC or Marvel
+                let publisher = document.createElement('p');
+                //create p tag for alignment (if they are good or evil)
+                let alignment = document.createElement('p');
+                //append name as a child to an existing tag reserved for content
+                heroOneInfo.appendChild(name);
+                name.innerText = element.name;
+                heroOneInfo.appendChild(img);
                 heroOneInfo.appendChild(realName);
                 //handling the case where some superheroes don't have real names
                 if(element.biography.fullName === '') {
@@ -133,15 +137,10 @@ function addToDOM(data) {
                 } else {
                     realName.innerText = 'REAL NAME: ' + element.biography.fullName;
                 }
-                //create p tag for the publisher of the superhero such as DC or Marvel
-                let publisher = document.createElement('p');
                 heroOneInfo.appendChild(publisher);
                 publisher.innerText = 'PUBLISHER: ' + element.biography.publisher;
-                //create p tag for alignment (if they are good or evil)
-                let alignment = document.createElement('p');
                 heroOneInfo.appendChild(alignment);
                 alignment.innerText = 'ALIGNMENT: ' + element.biography.alignment;
-                
                 //create array for chart to use as data
                 stats1 = element.powerstats;
             }
@@ -151,34 +150,33 @@ function addToDOM(data) {
             if(heroTwoName.value === element.name) {
                 //create name in h5 tag
                 let name = document.createElement('h5');
-                //append it as a child to an existing tag reserved for content
-                heroTwoInfo.appendChild(name);
-                name.innerText = element.name;
                 //create img tag in DOM
                 let img = document.createElement('img');
+                //add p tag for the real name of the superhero
+                let realName = document.createElement('p');
+                //create p tag for the publisher of the superhero such as DC or Marvel
+                let publisher = document.createElement('p');
+                //create p tag for alignment (if they are good or evil)
+                let alignment = document.createElement('p');
+
+                //append name as a child to an existing tag reserved for content
+                heroTwoInfo.appendChild(name);
+                name.innerText = element.name;
                 img.src = element.images.sm;
                 //using the name of the hero as alternate text for accesibility
                 img.alt = element.name;
                 heroTwoInfo.appendChild(img);
-                //add p tag for the real name of the superhero
-                let realName = document.createElement('p');
                 heroTwoInfo.appendChild(realName);
                 //handling the case where some superheroes don't have real names
                 if(element.biography.fullName === '') {
                     realName.innerText = 'REAL NAME: same'
                 } else {
                     realName.innerText = 'REAL NAME: ' + element.biography.fullName;
-                }
-                //create p tag for the publisher of the superhero such as DC or Marvel
-                let publisher = document.createElement('p');
+                }        
                 heroTwoInfo.appendChild(publisher);
                 publisher.innerText = 'PUBLISHER: ' + element.biography.publisher;
-
-                //create p tag for alignment (if they are good or evil)
-                let alignment = document.createElement('p');
                 heroTwoInfo.appendChild(alignment);
                 alignment.innerText = 'ALIGNMENT: ' + element.biography.alignment;
-
                 //create array for chart to use as data
                 stats2 = element.powerstats;
             } 
