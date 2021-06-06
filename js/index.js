@@ -60,11 +60,9 @@ function displayHeroes(data) {
         let image = document.createElement("img");
 
         // Set the source to one of the images from the data
-        // data[num].images.md
         image.src = data[num].images.md;
 
         // Set the image alt
-        // data[num].name
         image.alt = data[num].name;
         
         // Append the image to the card div
