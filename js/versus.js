@@ -77,9 +77,8 @@ function createChart(stats1, stats2) {
     })
 }
 
-
 //find the names and create cards
-function findNames(data) {
+function findHeroByName(data) {
     //get html elements by ID
     const heroOneInfo = document.getElementById('heroOneInfo');
     const heroTwoInfo = document.getElementById('heroTwoInfo');
@@ -226,5 +225,5 @@ async function getApiJson() {
     }
 
     //pass the JSON file to another function to be broken
-    findNames(getJson);
+    findHeroByName(getJson);
 }
